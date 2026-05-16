@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack-A-Mole!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Whack-A-Mole!</h1>
+        
+        <div class="score-board">
+            <div>⏱️ Time Left: <span id="time-left">30</span>s</div>
+            <div>🏆 Score: <span id="score">0</span></div>
+        </div>
+
+        <button id="start-btn" onclick="startGame()">🏁 Start Game</button>
+
+        <!-- The 3x2 Grid of Holes -->
+        <div class="grid">
+            <div class="hole"><div class="mole">🐹</div></div>
+            <div class="hole"><div class="mole">🐹</div></div>
+            <div class="hole"><div class="mole">🐹</div></div>
+            <div class="hole"><div class="mole">🐹</div></div>
+            <div class="hole"><div class="mole">🐹</div></div>
+            <div class="hole"><div class="mole">🐹</div></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

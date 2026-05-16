@@ -1,0 +1,87 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0f2fe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 360px;
+}
+
+h1 {
+    color: #b45309;
+    margin-top: 0;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #f3f4f6;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    color: #374151;
+}
+
+#start-btn {
+    background-color: #10b981;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: background-color 0.2s;
+}
+
+#start-btn:hover {
+    background-color: #059669;
+}
+
+/* 3x2 Layout for the dirt holes */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 15px;
+    justify-content: center;
+}
+
+.hole {
+    width: 100px;
+    height: 90px;
+    background-color: #78350f; /* Dirt brown color */
+    border-radius: 50% 50% 10% 10%;
+    position: relative;
+    overflow: hidden; /* NEW: Hides the mole when it moves down */
+    border-bottom: 8px solid #451a03;
+}
+
+.mole {
+    font-size: 45px;
+    position: absolute;
+    width: 100%;
+    bottom: -60px; /* NEW: Starts completely hidden below the dirt line */
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    transition: bottom 0.15s ease-out; /* Makes the pop-up look smooth */
+}
+
+/* NEW: JavaScript will add this class to push the mole into view */
+.mole.up {
+    bottom: 10px;
+}
